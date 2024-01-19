@@ -31,4 +31,12 @@ h1{
     justify-content: space-around;
     align-items: center;
     
+    
+}
+.point{
+    cursor: pointer;
+    transition: color 0.5s ease;
+}
+.point:hover{
+    color: rgba(67, 194, 194, 0.5);
 }
