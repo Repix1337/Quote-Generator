@@ -33,6 +33,7 @@ let characters = {
 
 let character = document.querySelector("h2");
 let quoteText = document.querySelector("h3");
+let quoteContainer = document.getElementById("#quote");
 
 fetch('data.json')
   .then(response => response.json())
@@ -61,6 +62,12 @@ fetch('data.json')
         }, 500);
         document.body.style.backgroundImage = 'url(' + characters[key].imageBackground + ')';
         document.body.style.backgroundRepeat = "no-repeat"
+        
+        if (key==pilsudski)
+          {
+            quote.style.backgroundColor = "#000000aa";
+            quoteContainer.style.backgroundColor = "#000000aa";
+          }
       });
     }
   });
