@@ -65,7 +65,7 @@ fetch('data.json')
         
         if (key==pilsudski)
           {
-            quote.style.backgroundColor = "#000000aa";
+            
             quoteContainer.style.backgroundColor = "#000000aa";
           }
       });
