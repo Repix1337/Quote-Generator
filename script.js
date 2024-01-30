@@ -69,22 +69,21 @@ for (const key in characters) {
   let characterImage = document.createElement('img');
   characterImage.src = characters[key].image;
   characterImage.style.position = "absolute";
-  characterImage.style.width = "150px";
-  characterImage.style.height = "auto";
+  // characterImage.style.width = "100%";
+  characterImage.style.width = "auto";
+  characterImage.style.height = "100%";
   characterImage.style.opacity = '0';
   characters[key].element.appendChild(characterImage);
 
   characters[key].element.addEventListener("mouseover", () => {
     characterImage.style.transition = 'opacity 0.5s ease';
     characterImage.style.opacity = '1';
-    characters[key].element.text.style.transition = 'opacity 0.5s ease';
-    characters[key].element.text.style.opacity = '0';
+    
   });
 
   characters[key].element.addEventListener("mouseout", () => {
     characterImage.style.transition = 'opacity 0.5s ease';
     characterImage.style.opacity = '0';
-    characters[key].element.text.style.transition = 'opacity 0.5s ease';
-    characters[key].element.text.style.opacity = '1';
+    
   });
 }
